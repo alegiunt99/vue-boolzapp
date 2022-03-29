@@ -5,7 +5,25 @@
     font-family: sans-serif;
 }
 
+.fa-solid{
+    color: rgb(176, 176, 176);
+}
+
+.fa-solid:hover{
+    color:rgb(104, 104, 104);
+    cursor: pointer;
+}
+
 /* UTILITIES */
+
+.bg-recived-mex{
+    background-color: white;
+}
+
+.bg-send-mex{
+    background-color: #d5f9ba;
+}
+
 
 .border-radius-50{
     border-radius: 50%;
@@ -22,6 +40,12 @@
 
 /* CONTENT  */ 
 
+.background{
+    width: 100vw;
+    height: 200px;
+    background-color: #009688;
+}
+
 .whatsapp-container{
     display: flex;
     max-width: 90%;
@@ -34,7 +58,7 @@
 
 .contacts-section{
     width: 40%;
-    border: 2px dashed red;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     row-gap: 3px;
@@ -47,8 +71,8 @@
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
-    background-color: lightgray;
-    padding: 20px;
+    background-color: #eaeaea;
+    padding: 29px 10px;
 }
 
 #user-header .user-box{
@@ -154,6 +178,11 @@
     padding-top: 3px;
 }
 
+.contact-box:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 .contacts-container{
     display: flex;
     flex-direction: column;
@@ -200,7 +229,7 @@
 
 .message-section{
     width: 60%;
-    border: 2px dashed green;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
 }
@@ -209,7 +238,7 @@
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color: #eaeaea;
 }
 
 
@@ -268,19 +297,46 @@
     width: 85%;
     height: 89%;
     margin: 26px auto;
-    border: 2px dashed;
     display: flex;
     justify-content: space-between;
 }
 
 .chat-container #recived-mex{
     width: 45%;
-    border: 1px dashed green;
+    display: flex;
+    flex-direction: column;
+    padding-top: 117px;
+}
+
+
+
+.mex-layout{
+    border-radius: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.mex-content{
+    padding: 10px 0;
+    width: 65%;
+    font-size: 13px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.mex-time{
+    width: 15%;
+    font-size: 10px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
 }
 
 .chat-container #send-mex{
     width: 45%;
-    border: 1px dashed red;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -289,7 +345,7 @@
 /*    FOOTER      */ 
 
 .message-section footer{
-    background-color: lightgrey;
+    background-color: #eaeaea;
     display: flex;
     padding: 10px 0;
 }
