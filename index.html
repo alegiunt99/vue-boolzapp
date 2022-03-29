@@ -35,13 +35,13 @@
                 <div class="user-box">
                     <!-- l'immagine del nostro user -->
                     <div class="user-img">
-                        <img src="" alt="">
+                        <img src="img/avatar_io.jpg" alt="Foto profilo" class="width-100">
                     </div>
 
 
                     <!-- il nome dell'user -->
                     <div id="name-user">
-                        <p></p>
+                        <p>Simona</p>
                     </div>
 
                 </div>
@@ -73,22 +73,22 @@
             <!-- un input di testo in cui cercare i contatti -->
             <div class="search-contact">
                 <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                <input type="text" id="search">
+                <input type="text" id="search" placeholder="Cerca o inizia una nuova chat">
             </div>
 
 
             <div class="contacts-container">
                 <!-- la lista dei contatti -->
-                <div class="contact-box">
+                <div class="contact-box" v-for="(contact, indexCont) in contacts">
 
                     <div class="contact-infos">
                         <div class="user-image">
-                            <img src="" alt="">
+                            <img src="" alt="" class="width-100">
                         </div>
 
                         <div id="name-contact">
-                            <p></p>
-                            <span></span>
+                            <p>{{contact.name}}</p>
+                            <span>Ultimo messaggio</span>
                         </div>
                     </div>
 

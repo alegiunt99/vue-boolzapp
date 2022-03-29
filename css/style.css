@@ -7,6 +7,10 @@
 
 /* UTILITIES */
 
+.width-100{
+    width: 100%;
+    border-radius: 50%;
+}
 
 /* CONTENT  */ 
 
@@ -36,7 +40,10 @@
 
 #user-header .user-box{
     display: flex;
+    align-items: center;
     width: 35%;
+    column-gap: 6px;
+    padding-left: 5px;
 }
 
 #user-header .user-box .user-img{
@@ -45,6 +52,7 @@
 
 #user-header .user-box #name-user{
  width: 70%;
+ font-size: 18px;
 }
 
 #user-header #options-btn{
@@ -111,30 +119,36 @@
 
 .contact-box{
     display: flex;
-    height: 80px;
     justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding-top: 3px;
 }
 
 .contacts-container{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    row-gap: 5px;
 }
 
 
 .contact-box .contact-infos{
- width: 50%;
- display: flex;
+    width: 65%;
+    display: flex;
+    padding: 5px 0px;
 }
 
 .contact-box .contact-infos .user-image{
-    width: 40%;
+    width: 30%;
 }
 
 .contact-box .contact-infos #name-contact{
     width: 60%;
 }
 
+.contact-box .contact-infos #name-contact span {
+    font-size: 11px;
+}
 .contact-box #last-message-time{
     width: 15%;
     display: flex;
