@@ -21,7 +21,176 @@
 </head>
 
 <body>
+
+    <!-- creo un container diviso in 2 parti: CONTATTI e MESSAGGI -->
     <div class="whatsapp-container">
+
+
+        <!------------------- CONTATTI --------------->
+        <section class="contacts-section">
+
+            <!-- La parte superiore con foto e nome dell'utente che ha effettuato l'accesso-->
+            <div id="user-header">
+
+                <div class="user-box">
+                    <!-- l'immagine del nostro user -->
+                    <div class="user-img">
+                        <img src="" alt="">
+                    </div>
+
+
+                    <!-- il nome dell'user -->
+                    <div id="name-user">
+                        <p></p>
+                    </div>
+
+                </div>
+
+
+                <div id="options-btn" class="btn-fas">
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+                </div>
+            </div>
+
+
+
+            <!-- una piccola parte in cui si attivano o disattivano le notifiche -->
+            <div id="notification">
+                <div class="icon-notif btn-fas">
+                </div>
+
+                <div class="notif-message">
+                    <p></p>
+                    <span></span>
+                </div>
+            </div>
+
+
+
+            <!-- un input di testo in cui cercare i contatti -->
+            <div class="search-contact"></div>
+
+
+
+
+            <!-- la lista dei contatti -->
+            <div class="contact-cont">
+
+                <div class="user-image">
+                    <img src="" alt="">
+                </div>
+
+                <div id="name-contact">
+                    <p></p>
+                    <span></span>
+                </div>
+
+                <div id="last-message-time">
+                    <span></span>
+                </div>
+            </div>
+
+        </section>
+        <!-- fine sezione CONTATTI -->
+
+
+        <!----------------  MESSAGGI ------------------->
+        <section class="message-section">
+
+
+
+
+            <!-- header contiene la foto, il nome del contatto e i vari pulsanti di opzione -->
+            <header>
+                <!-- foto e nome del contatto della chat -->
+                <div class="contact-now">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+
+                    <div>
+                        <p></p>
+                        <span></span>
+                    </div>
+                </div>
+
+
+                <!-- pulsanti di opzioni (chiamata o impostazioni) -->
+                <div id="options" class="btn-fas">
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+                </div>
+            </header>
+
+
+
+
+
+            <!-- contenuto dei messaggi ricevuti e inviati -->
+            <main>
+                <!-- creo un contenitore che contiene i messaggi inviati e quelli ricevuti -->
+                <div class="chat-container">
+
+                    <!-- container dei messaggi ricevuti -->
+                    <div id="recived-mex">
+
+                        <!-- creo il layout di ogni messaggio -->
+                        <div class="mex-layout">
+                            <div id="mex-content">
+                                <p></p>
+                            </div>
+
+                            <div id="mex-time">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- container dei messaggi inviati -->
+                    <div id="send-mex">
+
+                        <!-- creo il layout di ogni messaggio -->
+                        <div class="mex-layout">
+                            <div id="mex-content">
+                                <p></p>
+                            </div>
+
+                            <div id="mex-time">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </main>
+
+
+
+
+
+            <!-- la parte in cui si scrive il messaggio, con 2 pulsanti esterni -->
+            <footer>
+                <!-- icona delle emoji -->
+                <div id="emoji"></div>
+
+                <!-- input dove scrivere il messaggio -->
+                <div class="tipe-mex">
+
+                </div>
+
+                <!-- icona del messaggio vocale -->
+                <div id="vocal-mex">
+
+                </div>
+            </footer>
+        </section>
+        <!-- fine sezione MESSAGGI -->
+
 
     </div>
 </body>
