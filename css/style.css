@@ -23,6 +23,7 @@
     border: 2px dashed red;
     display: flex;
     flex-direction: column;
+    row-gap: 3px;
 }
 
 #user-header{
@@ -30,6 +31,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 50px;
+    background-color: lightgray;
 }
 
 #user-header .user-box{
@@ -47,24 +49,64 @@
 
 #user-header #options-btn{
     width: 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #notification{
     display: flex;
-    height: 50px;
+    background-color: lightblue;
+    padding: 5px;
 }
 
 #notification .icon-notif{
     width: 30%;
+    text-align: center;
+    font-size: 21px;
+    color: lightblue;
+}
+
+#notification .icon-notif i{
+    background-color: white;
+    padding: 10px;
+    border-radius: 49%;
 }
 
 #notification .notif-message{
     width: 70%;
 }
 
+#notification .notif-message p{
+    font-size: 15px;
+}
+
+#notification .notif-message span{
+    font-size: 12px;
+}
+
 
 .search-contact{
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-contact label{
+    padding: 0px 17px;
+    border: 1px solid lightgray;
+    
+}
+
+.search-contact label i{
+    font-size: 13px;
+}
+
+.search-contact input{
+    padding: 3px;
+    width: 78%;
+    font-size: 15px;
+    border: 1px solid lightgray;
 }
 
 .contact-box{
