@@ -186,7 +186,10 @@ const app = new Vue({
 
     methods: {
 
-        
+        /*imgUrl(contactV) {
+            
+        }`img/avatar${contact-infos}.jpg`*/
+
     }
 
 })

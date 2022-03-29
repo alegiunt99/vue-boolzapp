@@ -7,9 +7,17 @@
 
 /* UTILITIES */
 
+.border-radius-50{
+    border-radius: 50%;
+}
+
 .width-100{
     width: 100%;
-    border-radius: 50%;
+    
+}
+
+.width-75{
+    width: 75%;
 }
 
 /* CONTENT  */ 
@@ -136,6 +144,8 @@
     width: 65%;
     display: flex;
     padding: 5px 0px;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-box .contact-infos .user-image{
