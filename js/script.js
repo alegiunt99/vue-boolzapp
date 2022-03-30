@@ -204,7 +204,7 @@ const app = new Vue({
 
         selectedContact: 0,
 
-
+        searchContact: '',
     },
 
     methods: {

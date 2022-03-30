@@ -192,6 +192,19 @@
     row-gap: 5px;
 }
 
+.contacts-container::-webkit-scrollbar{
+    width: 10px;
+   
+}
+
+.contacts-container::-webkit-scrollbar-thumb{
+    background: rgb(206, 206, 206); 
+    border-radius: 10px;
+}
+
+.contacts-container::-webkit-scrollbar-thumb:hover{
+    background: rgb(156, 156, 156); 
+}
 
 .contact-box .contact-infos{
     width: 65%;
@@ -290,8 +303,24 @@
 .message-section main{
     height: 100%;
     background-image: url(../img/mine.jpg);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
+
+.message-section main::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+.message-section main::-webkit-scrollbar-thumb{
+    background: rgb(206, 206, 206); 
+    border-radius: 10px;
+}
+
+.message-section main::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 156, 156); 
+    
+  }
+
 
 
 
