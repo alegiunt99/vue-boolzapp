@@ -88,7 +88,7 @@
 
                         <div id="name-contact">
                             <p>{{contact.name}}</p>
-                            <span></span>
+                            <span>{{getLastMessage(contact)}}</span>
                         </div>
                     </div>
 
@@ -142,7 +142,7 @@
             <!-- contenuto dei messaggi ricevuti e inviati -->
             <main>
                 <!-- creo un contenitore che contiene i messaggi inviati e quelli ricevuti -->
-                <div class="chat-container">
+                <div class="chat-container" v-if="selectedContact >= 0">
 
                     <!-- container dei messaggi ricevuti -->
                     <div id="recived-mex">
@@ -166,7 +166,7 @@
                         <!-- creo il layout di ogni messaggio -->
                         <div class="mex-layout bg-send-mex">
                             <div class="mex-content">
-                                <p>Hai portato a spasso il cane?</p>
+                                <p></p>
                             </div>
 
                             <div class="mex-time">

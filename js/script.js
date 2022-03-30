@@ -204,6 +204,8 @@ const app = new Vue({
 
         selectedContact: 0,
 
+        messageObject: 0,
+
     },
 
     methods: {
@@ -214,7 +216,15 @@ const app = new Vue({
 
         },
 
-        
+        getLastMessage(contact){
+
+            const messages = contact.messages;
+
+            const lastMessage = messages[messages.length - 1].message;
+
+            return lastMessage;
+
+        },
 
     }
 
