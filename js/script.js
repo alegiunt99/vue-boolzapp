@@ -198,11 +198,24 @@ const app = new Vue({
                     }
                 ],
             }
-        ]
+        ],
+
+        newMessage: '',
+
+        selectedContact: 0,
 
     },
 
     methods: {
+
+        selectContact(index) {
+            
+            this.selectedContact = index;
+
+        },
+
+        
+
     }
 
 })

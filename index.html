@@ -79,7 +79,7 @@
 
             <div class="contacts-container">
                 <!-- la lista dei contatti -->
-                <div class="contact-box" v-for="(contact, indexCont) in contacts">
+                <div class="contact-box" v-for="(contact, indexCont) in contacts" @click="selectContact(indexCont)">
 
                     <div class="contact-infos">
                         <div class="user-image">
@@ -88,7 +88,7 @@
 
                         <div id="name-contact">
                             <p>{{contact.name}}</p>
-                            <span>Ultimo messaggio</span>
+                            <span></span>
                         </div>
                     </div>
 
@@ -115,14 +115,14 @@
             <!-- header contiene la foto, il nome del contatto e i vari pulsanti di opzione -->
             <header>
                 <!-- foto e nome del contatto della chat -->
-                <div class="contact-now">
+                <div class="contact-now" v-if="selectedContact >= 0">
                     <div id="contact-photo">
-                        <img src="img/avatar_1.jpg" alt="" class="border-radius-50">
+                        <img :src="`img/avatar${contacts[selectedContact].avatar}.jpg`" alt="" class="border-radius-50">
                     </div>
 
                     <div id="contact-last-access">
-                        <p>Michele</p>
-                        <span>Ultimo accesso alle 12:45</span>
+                        <p>{{contacts[selectedContact].name}}</p>
+                        <span>Ultimo accesso alle 14:03</span>
                     </div>
                 </div>
 
@@ -150,11 +150,11 @@
                         <!-- creo il layout di ogni messaggio -->
                         <div class="mex-layout bg-recived-mex">
                             <div class="mex-content">
-                                <p>Tutto fatto!</p>
+                                <p></p>
                             </div>
 
                             <div class="mex-time">
-                                <span>12:18</span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
 
                 <!-- input dove scrivere il messaggio -->
                 <div class="tipe-mex">
-                    <input type="text" name="ScriviUnMex" placeholder="Scrivi un messaggio">
+                    <input type="text" name="ScriviUnMex" placeholder="Scrivi un messaggio" v-model="newMessage">
                 </div>
 
                 <!-- icona del messaggio vocale -->
