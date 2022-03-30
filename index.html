@@ -122,7 +122,7 @@
 
                     <div id="contact-last-access">
                         <p>{{contacts[selectedContact].name}}</p>
-                        <span>Ultimo accesso alle 14:03</span>
+                        <span>Ultimo accesso alle {{createRandomTime()}}</span>
                     </div>
                 </div>
 
@@ -145,36 +145,19 @@
                 <div class="chat-container" v-if="selectedContact >= 0">
 
                     <!-- container dei messaggi ricevuti -->
-                    <div id="recived-mex">
+                    <div id="rec-or-sent-mex" v-for="(message, index) in contacts[selectedContact].messages">
 
                         <!-- creo il layout di ogni messaggio -->
-                        <div class="mex-layout bg-recived-mex">
+                        <div :class="['mex-layout', sentOrRecived(message)]">
                             <div class="mex-content">
-                                <p></p>
+                                <p>{{message.message}}</p>
                             </div>
 
                             <div class="mex-time">
-                                <span></span>
+                                <span>{{message.date}}</span>
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- container dei messaggi inviati -->
-                    <div id="send-mex">
-
-                        <!-- creo il layout di ogni messaggio -->
-                        <div class="mex-layout bg-send-mex">
-                            <div class="mex-content">
-                                <p></p>
-                            </div>
-
-                            <div class="mex-time">
-                                <span>12:10</span>
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
             </main>

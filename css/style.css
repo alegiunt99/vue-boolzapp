@@ -18,10 +18,12 @@
 
 .bg-recived-mex{
     background-color: white;
+    align-self: flex-start;
 }
 
 .bg-send-mex{
     background-color: #d5f9ba;
+    align-self: flex-end;
 }
 
 
@@ -298,19 +300,17 @@
     height: 89%;
     margin: 26px auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.chat-container #recived-mex{
-    width: 45%;
+.chat-container #rec-or-sent-mex{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 117px;
 }
 
-
-
 .mex-layout{
+    width: 40%;
     border-radius: 10px;
     justify-content: space-between;
     display: flex;
