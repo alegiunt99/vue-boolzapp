@@ -238,22 +238,24 @@ const app = new Vue({
             }
         },
 
-        createRandomTime(){
+        createNowTime(){
 
-            const randomHours = Math.floor(Math.random() * 23);
-            
-            const randomMinutes = Math.floor(Math.random() * 59);
-            
-            return `${randomHours}:${randomMinutes}`;
+            const d = new Date();
+
+            const hours = d.getHours();
+
+            const minutes = d.getMinutes();
+
+            return `${hours}:${minutes}`;
         },
 
         messageAnswer() {
             
             const messageAnswerObject = {
                 
-                date: this.createRandomTime(),
+                date: this.createNowTime(),
     
-                message: 'ciao',
+                message: 'ok',
     
                 status: 'recived',
             }
@@ -271,7 +273,7 @@ const app = new Vue({
 
             const messageObject = {
 
-                date: this.createRandomTime(),
+                date: this.createNowTime(),
     
                 message: this.newMessage,
     
@@ -281,6 +283,8 @@ const app = new Vue({
             this.contacts[this.selectedContact].messages.push(messageObject)
 
             this.messageAnswer()
+
+            this.newMessage = '';
 
         }
        
