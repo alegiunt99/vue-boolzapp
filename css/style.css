@@ -270,7 +270,7 @@
 .contact-now #contact-photo{
     width: 20%;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .contact-now #contact-photo img{
@@ -279,7 +279,9 @@
 
 .contact-now #contact-last-access{
     width: 60%;
-    line-height: 13px;
+    row-gap: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-now #contact-last-access span{
@@ -290,8 +292,9 @@
     width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     column-gap: 19px;
+    padding-right: 20px;
 }
 
 
@@ -348,11 +351,16 @@
 
 .mex-content{
     padding: 10px 0;
-    width: 65%;
+    width: 80%;
     font-size: 13px;
     padding-left: 15px;
     display: flex;
     align-items: center;
+}
+
+.mex-content p{
+    width: 100%;
+    overflow-wrap: break-word;
 }
 
 .mex-time{
