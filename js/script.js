@@ -225,6 +225,14 @@ const app = new Vue({
 
         },
 
+        getLastTimeMex(contact) {
+            const messages = contact.messages;
+
+            const lastMessageTime = messages[messages.length - 1].date;
+
+            return lastMessageTime;
+        },
+
         sentOrRecived(message){
 
             if (message.status === 'sent') {
