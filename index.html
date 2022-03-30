@@ -175,7 +175,7 @@
 
                 <!-- input dove scrivere il messaggio -->
                 <div class="tipe-mex">
-                    <input type="text" name="ScriviUnMex" placeholder="Scrivi un messaggio" v-model="newMessage">
+                    <input type="text" v-model="newMessage" @keyUp.enter="addNewMessage()">
                 </div>
 
                 <!-- icona del messaggio vocale -->

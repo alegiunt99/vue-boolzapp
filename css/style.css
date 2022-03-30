@@ -301,6 +301,7 @@
     margin: 26px auto;
     display: flex;
     flex-direction: column;
+    row-gap: 4px;
 }
 
 .chat-container #rec-or-sent-mex{

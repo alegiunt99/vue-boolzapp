@@ -204,7 +204,6 @@ const app = new Vue({
 
         selectedContact: 0,
 
-        messageObject: 0,
 
     },
 
@@ -241,13 +240,51 @@ const app = new Vue({
 
         createRandomTime(){
 
-            const randomHours = Math.floor(Math.random() * 23) - 1;
+            const randomHours = Math.floor(Math.random() * 23);
             
-            const randomMinutes = Math.floor(Math.random() * 59) - 1;
+            const randomMinutes = Math.floor(Math.random() * 59);
             
             return `${randomHours}:${randomMinutes}`;
-        }
+        },
 
+        messageAnswer() {
+            
+            const messageAnswerObject = {
+                
+                date: this.createRandomTime(),
+    
+                message: 'ciao',
+    
+                status: 'recived',
+            }
+
+            const answerHello = setTimeout(() =>
+            {
+                this.contacts[this.selectedContact].messages.push(messageAnswerObject)
+             },
+            1000)
+
+            return answerHello;
+        },
+
+        addNewMessage() { 
+
+            const messageObject = {
+
+                date: this.createRandomTime(),
+    
+                message: this.newMessage,
+    
+                status: 'sent',
+            }
+
+            this.contacts[this.selectedContact].messages.push(messageObject)
+
+            this.messageAnswer()
+
+        }
+       
+        
 
     }
 
