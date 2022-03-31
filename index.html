@@ -74,13 +74,14 @@
             <div class="search-contact">
                 <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
                 <input type="text" v-model="searchContact" id="search" placeholder="Cerca o inizia una nuova chat"
-                    autocomplete="off">
+                    autocomplete="off" @keyup.enter="ricercaUtente()">
             </div>
 
 
             <div class="contacts-container">
                 <!-- la lista dei contatti -->
-                <div class="contact-box" v-for="(contact, indexCont) in contacts" @click="selectContact(indexCont)">
+                <div class="contact-box" v-for="(contact, indexCont) in contacts" @click="selectContact(indexCont)"
+                    v-if="contact.visible == true">
 
                     <div class="contact-infos">
                         <div class="user-image">

@@ -343,6 +343,28 @@ const app = new Vue({
 
         },
         
+        ricercaUtente() {
+
+            
+
+            const searchBar = this.searchContact.toLowerCase();
+
+            for (let i = 0; i < this.contacts.length; i++) {
+
+                const names = this.contacts[i].name.toLowerCase();
+
+                if (names.includes(searchBar)) {
+
+                    this.contacts[i].visible = true;
+                }
+                else {
+                    
+                    this.contacts[i].visible = false;
+                }
+
+            }
+            
+        },
 
     },
     
