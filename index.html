@@ -160,6 +160,10 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                                 <span>{{message.date}}</span>
                             </div>
+                            <div id="blue-check">
+                                <i v-if="message.status === 'sent'" class="fa-solid fa-check-double"></i>
+                            </div>
+
                         </div>
                     </div>
 

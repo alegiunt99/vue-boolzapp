@@ -401,6 +401,17 @@ body{
     cursor: pointer;
 }
 
+.mex-layout #blue-check{
+    display: flex;
+    font-size: 12px;
+    align-self: flex-end;
+    padding-bottom: 10px;
+    padding-right: 5px;
+}
+
+.mex-layout #blue-check i{
+    color: rgb(11, 68, 255);
+}
 
 
 
