@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+body{
+    background-image: url(../img/background-page.png);
+    background-size: cover;
+}
+
 /* UTILITIES */
 
 .bg-recived-mex{
@@ -53,6 +58,7 @@
     max-width: 90%;
     margin: 30px auto;
     height: 90vh;
+    background-color: white;
 }
 
 
@@ -224,6 +230,7 @@
 
 .contact-box .contact-infos #name-contact span {
     font-size: 11px;
+    color: gray;
 }
 .contact-box #last-message-time{
     width: 15%;
@@ -233,6 +240,7 @@
     font-size: 13px;
     padding-right: 5px;
     padding-top: 3px;
+    color: gray;
 }
 
 
@@ -286,6 +294,7 @@
 
 .contact-now #contact-last-access span{
     font-size: 12px;
+    color: gray;
 }
 
 .message-section header #options{
