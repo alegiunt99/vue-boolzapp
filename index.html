@@ -150,22 +150,41 @@
                     <!-- container dei messaggi ricevuti -->
                     <div id="rec-or-sent-mex" v-for="(message, index) in contacts[selectedContact].messages">
 
+
                         <!-- creo il layout di ogni messaggio -->
-                        <div :class="['mex-layout', sentOrRecived(message)]">
+                        <div :class="['mex-layout', sentOrRecived(message)]"
+                            v-if="contacts[selectedContact].messages.length > 0">
                             <div class="mex-content">
                                 <p>{{message.message}}</p>
                             </div>
 
                             <div class="mex-time">
-                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-down" @click="openMexInfo(message)"></i>
+                                <div id="delete-message" v-if="message.infoMexOpen === true">
+                                    <p @click="deleteMessage(index)">Delete message</p>
+                                </div>
                                 <span>{{message.date}}</span>
                             </div>
+
+
                             <div id="blue-check">
                                 <i v-if="message.status === 'sent'" class="fa-solid fa-check-double"></i>
                             </div>
 
+
+                        </div>
+
+
+
+                        <div class="empty-chat" v-else="contacts[selectedContact].messages.length === 0">
+
+                            <h1>Scrivi un messaggio e inizia a chattare!</h1>
+
                         </div>
                     </div>
+
+
+
 
                 </div>
             </main>

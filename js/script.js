@@ -45,17 +45,20 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'Ricordati di stendere i panni',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '16:15',
                         message: 'Tutto fatto!',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -67,17 +70,20 @@ const app = new Vue({
                     {
                         date: '16:30',
                         message: 'Ciao come stai?',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '16:30',
                         message: 'Bene grazie! Stasera ci vediamo?',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     },
                     {
                         date: '16:35',
                         message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -89,17 +95,20 @@ const app = new Vue({
                     {
                         date: '10:10',
                         message: 'La Marianna va in campagna',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     },
                     {
                         date: '10:20',
                         message: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '16:15',
                         message: 'Ah scusa!',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -111,12 +120,14 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -128,12 +139,14 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Ricordati di chiamare la nonna',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'Va bene, stasera la sento',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -145,17 +158,20 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Ciao Claudia, hai novità?',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'Non ancora',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:51',
                         message: 'Nessuna nuova, buona nuova',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -167,12 +183,14 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Fai gli auguri a Martina che è il suo compleanno!',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'Grazie per avermelo ricordato, le scrivo subito!',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             },
@@ -184,17 +202,20 @@ const app = new Vue({
                     {
                         date: '15:30',
                         message: 'Ciao, andiamo a mangiare la pizza stasera?',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:50',
                         message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
-                        status: 'sent'
+                        status: 'sent',
+                        infoMexOpen: false,
                     },
                     {
                         date: '15:51',
                         message: 'OK!!',
-                        status: 'received'
+                        status: 'received',
+                        infoMexOpen: false,
                     }
                 ],
             }
@@ -208,6 +229,7 @@ const app = new Vue({
 
         // creo una chiave d'appoggio per la ricerca del contatto che scrivo nell'input
         searchContact: '',
+
     },
 
 
@@ -365,6 +387,26 @@ const app = new Vue({
             }
             
         },
+
+        openMexInfo(message){
+
+            message.infoMexOpen = !message.infoMexOpen;
+
+            console.log(message.infoMexOpen)
+        },
+
+        deleteMessage(index) {
+           
+            this.contacts[this.selectedContact].messages.splice(index, 1);
+
+            if (this.contacts[this.selectedContact].messages.length === 0) {
+                
+                this.contacts[this.selectedContact].messages = [];
+
+            }
+            console.log("l'array numbers è lungo:", this.contacts[this.selectedContact].messages.length)
+
+        }
 
     },
     
