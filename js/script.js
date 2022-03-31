@@ -200,21 +200,28 @@ const app = new Vue({
             }
         ],
 
+        // creo una chiave d'appoggio per il messaggio nuovo che scrivo nell'input
         newMessage: '',
 
+        // una chiave che mi collega l'elemento dell'array all'html
         selectedContact: 0,
 
+        // creo una chiave d'appoggio per la ricerca del contatto che scrivo nell'input
         searchContact: '',
     },
 
+
+    // creo i metodi
     methods: {
 
+        // creo una funzione che colleghi il selectedContract con l'indice del v-for
         selectContact(index) {
             
             this.selectedContact = index;
 
         },
 
+        // una funzione che permette di prendere l'ultimo elemento dell'array messages
         getLastMessage(contact){
 
             const messages = contact.messages;
@@ -225,6 +232,7 @@ const app = new Vue({
 
         },
 
+        // una funzione che permette di prendere l'orario dell'ultimo messaggio
         getLastTimeMex(contact) {
             const messages = contact.messages;
 
@@ -233,6 +241,7 @@ const app = new Vue({
             return lastMessageTime;
         },
 
+        //creo una funzione che seleziona divide i messaggi in inviati e ricevuti
         sentOrRecived(message){
 
             if (message.status === 'sent') {
@@ -246,6 +255,8 @@ const app = new Vue({
             }
         },
 
+
+        //creo una funzione che genera l'orario seguente con 2 cifre sia per le ore che per i secondi
         createNowTime(){
 
             const d = new Date();
@@ -267,6 +278,8 @@ const app = new Vue({
             return `${hours}:${minutes}`;
         },
 
+
+        // creo un timer che aggiunge un messaggio di risposta al click
         messageAnswer() {
             
             const messageAnswerObject = {
@@ -287,10 +300,14 @@ const app = new Vue({
             return answerHello;
         },
 
+
+        // creo una funzione che aggiunge il messaggio scritto sull'input all'array dei messagg
         addNewMessage() { 
 
+            // creo una variabile che permette di accettare stringhe senza spazi
             const newMessage = this.newMessage.trim();
 
+            // creo l'oggetto da aggiungere all'array messaggi
             const messageObject = {
 
                 date: this.createNowTime(),
@@ -300,13 +317,16 @@ const app = new Vue({
                 status: 'sent',
             }
 
-
+            // creo una condizione che permette di aggiungere il messaggio solo se contiene almeno un carattere
             if (messageObject.message.length > 0){
 
+                // aggiungo l'oggetto all'array
                 this.contacts[this.selectedContact].messages.push(messageObject)
 
+                // faccio partire il timer con il messaggio di risposta
                 this.messageAnswer()
 
+                // una volta inviato, il valore dell'input si azzera
                 this.newMessage = '';
 
             }
