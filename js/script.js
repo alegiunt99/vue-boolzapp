@@ -289,20 +289,28 @@ const app = new Vue({
 
         addNewMessage() { 
 
+            const newMessage = this.newMessage.trim();
+
             const messageObject = {
 
                 date: this.createNowTime(),
     
-                message: this.newMessage,
+                message: newMessage,
     
                 status: 'sent',
             }
 
-            this.contacts[this.selectedContact].messages.push(messageObject)
 
-            this.messageAnswer()
+            if (messageObject.message.length > 0){
 
-            this.newMessage = '';
+                this.contacts[this.selectedContact].messages.push(messageObject)
+
+                this.messageAnswer()
+
+                this.newMessage = '';
+
+            }
+            
 
         },
         

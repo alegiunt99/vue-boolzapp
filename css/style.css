@@ -381,7 +381,7 @@ body{
     font-size: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-bottom: 4px;
 }
 
