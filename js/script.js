@@ -241,6 +241,15 @@ const app = new Vue({
             return lastMessageTime;
         },
 
+        getStatusMex(contact){
+
+            const messages = contact.messages;
+
+            const lastMessageStatus = messages[messages.length - 1].status;
+
+            return lastMessageStatus;
+        },
+
         //creo una funzione che seleziona divide i messaggi in inviati e ricevuti
         sentOrRecived(message){
 

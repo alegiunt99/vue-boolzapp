@@ -236,6 +236,11 @@ body{
     font-size: 11px;
     color: gray;
 }
+
+.contact-box .contact-infos #name-contact span i{
+    color: rgb(11, 68, 255);
+}
+
 .contact-box #last-message-time{
     width: 15%;
     display: flex;
