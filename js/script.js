@@ -250,9 +250,19 @@ const app = new Vue({
 
             const d = new Date();
 
-            const hours = d.getHours();
+            let hours = d.getHours();
 
-            const minutes = d.getMinutes();
+            if (hours < 10) {
+                
+                hours = '0' + hours
+            }
+
+            let minutes = d.getMinutes();
+
+            if (minutes < 10) {
+                
+                minutes = '0' + minutes
+            }
 
             return `${hours}:${minutes}`;
         },
